@@ -22,6 +22,7 @@ Requires_plugins=
 
 [BEGIN_COT_EXT_CONFIG]
 fixdate=10:select:0,60,3600,86400,856800,2592000,31536000:60:Fall back range
+formatdate=11:string:::Format date
 [END_COT_EXT_CONFIG]
 ==================== */
 

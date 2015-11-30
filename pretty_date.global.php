@@ -8,7 +8,7 @@ defined('COT_CODE') or die('Wrong URL.');
 
 require cot_langfile('pretty_date');
 
-function cot_pretty_date($timestamp, $uc_first = true, $std_Fmt = 'j M G:i')
+function cot_pretty_date($timestamp, $uc_first = true)
 {
 	global $sys, $cfg, $L;
 
@@ -28,8 +28,17 @@ function cot_pretty_date($timestamp, $uc_first = true, $std_Fmt = 'j M G:i')
 	}
 	else
 	{
-		if ($cfg['plugin']['pretty_date']['fixdate'])
+		if ($gap > ($cfg['plugin']['pretty_date']['fixdate']))
 		{
+			$formatdate = $cfg['plugin']['pretty_date']['formatdate'];
+			if ($formatdate)
+			{
+				$std_fmt = $formatdate;
+			}
+			else
+			{
+				$std_fmt = 'j M G:i';
+			}
 			$string = cot_date($std_fmt, $timestamp);
 		}
 		else
