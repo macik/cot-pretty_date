@@ -19,7 +19,7 @@ Features
 Requirements
 ------------
 
-Current version 1.0.3 requires Cotonti Siena v0.9.18
+Current version 1.0.4 requires Cotonti Siena v0.9.18
 
 ### Compatibility
 
